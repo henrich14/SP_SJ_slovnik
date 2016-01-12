@@ -1,0 +1,6 @@
+abogado:právnik
+ahora:teraz
+alegre:veselý
+alemán:nemecký;Nemec;nemèina
+alemana:Nemka
+amigo:kamarát;priate¾

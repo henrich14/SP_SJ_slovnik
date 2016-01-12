@@ -10,21 +10,22 @@ MainWindow::MainWindow(QWidget *parent) :
     QTime time = QTime::currentTime();
     qsrand((uint)time.msec());
 
-    readFile("C:/Users/KA/Desktop/SP_SJ_slovnik/vocabulario.txt");
+    QDir dir;
 
-    qDebug() << spanish;
-    qDebug() << slovak;
+    readFile(dir.path() + "/vocabulario.txt");
+    ui->openLineEdit->setText(dir.path() + "/vocabulario.txt");
 
     ui->spanishRB->setChecked(true);
-    vocabLen = spanish.size();
-    checked = true;
+    //vocabLen = spanish.size();
+    //checked = true;
 
-    randNum = random(0, vocabLen);
+    //randNum = random(0, vocabLen);
 
     connect(ui->refreshButton, SIGNAL(clicked()), this, SLOT(refresh_clicked()));
     connect(ui->changeButton, SIGNAL(clicked()), this, SLOT(change_clicked()));
     connect(ui->spanish_lineEdit, SIGNAL(returnPressed()), this, SLOT(refresh_clicked()));
     connect(ui->slovak_lineEdit, SIGNAL(returnPressed()), this, SLOT(refresh_clicked()));
+    connect(ui->openButton, SIGNAL(clicked()), this, SLOT(open_clicked()));
 
     refresh_clicked();
 }
@@ -63,7 +64,25 @@ void MainWindow::refresh_clicked()
         {
             ui->slovak_label->setText(slovak.at(randNum));
 
-            bool equal = checkWords(ui->slovak_lineEdit->text(), slovak.at(randNum));
+            QString slovakWord = slovak.at(randNum);
+            QString slovakTranslation = ui->slovak_lineEdit->text();
+            bool equal;
+            if(slovakWord.contains(";")) // sklada sa z viacerych slov
+            {
+                QStringList wordList; wordList = slovakWord.split(";");
+
+                QListIterator<QString> iter(wordList);
+                while(iter.hasNext())
+                {
+                    QString word = iter.next();
+                    equal = checkWords(slovakTranslation, word);
+                    if(equal) break;
+                }
+            }
+            else
+            {
+                equal = checkWords(slovakTranslation, slovakWord);
+            }
 
             if(equal)
             {
@@ -78,7 +97,25 @@ void MainWindow::refresh_clicked()
         {
             ui->spanish_label->setText(spanish.at(randNum));
 
-            bool equal = checkWords(ui->spanish_lineEdit->text(), spanish.at(randNum));
+            QString spanishWord = spanish.at(randNum);
+            QString spanishTranslation = ui->spanish_lineEdit->text();
+            bool equal;
+            if(spanishWord.contains(";")) // sklada sa z viacerych slov
+            {
+                QStringList wordList; wordList = spanishWord.split(";");
+
+                QListIterator<QString> iter(wordList);
+                while(iter.hasNext())
+                {
+                    QString word = iter.next();
+                    equal = checkWords(spanishTranslation, word);
+                    if(equal) break;
+                }
+            }
+            else
+            {
+                equal = checkWords(spanishTranslation, spanishWord);
+            }
 
             if(equal)
             {
@@ -89,8 +126,6 @@ void MainWindow::refresh_clicked()
                 ui->spanish_label->setStyleSheet("QLabel {color : red; }");
             }
         }
-
-
 
         checked = true;
     }
@@ -127,8 +162,25 @@ void MainWindow::change_clicked()
     }
 }
 
+void MainWindow::open_clicked()
+{
+    QDir dir;
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open vocabulary database "), dir.currentPath(), tr("Text Files (*.txt)"));
+
+    if(!fileName.isNull())
+    {
+        ui->openLineEdit->setText(fileName);
+
+        readFile(fileName);
+        refresh_clicked();
+    }
+}
+
 void MainWindow::readFile(const QString &fileName)
 {
+    spanish.clear();
+    slovak.clear();
+
     QFile file(fileName);
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -145,4 +197,9 @@ void MainWindow::readFile(const QString &fileName)
         spanish.append(lineList.at(0));
         slovak.append(lineList.at(1));
     }
+
+    vocabLen = spanish.size();
+    checked = true;
+
+    randNum = random(0, vocabLen);
 }

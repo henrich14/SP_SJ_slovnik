@@ -35,6 +35,7 @@ private:
 private slots:
     void refresh_clicked();
     void change_clicked();
+    void open_clicked();
 };
 
 #endif // MAINWINDOW_H

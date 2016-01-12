@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue 12. Jan 11:17:05 2016
+** Created: Tue 12. Jan 20:54:53 2016
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -36,6 +36,9 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout_3;
+    QHBoxLayout *horizontalLayout_3;
+    QLineEdit *openLineEdit;
+    QPushButton *openButton;
     QGroupBox *groupBox;
     QHBoxLayout *horizontalLayout;
     QRadioButton *spanishRB;
@@ -59,13 +62,29 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(511, 241);
+        MainWindow->resize(548, 278);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         verticalLayout_3 = new QVBoxLayout(centralWidget);
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setSpacing(6);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        openLineEdit = new QLineEdit(centralWidget);
+        openLineEdit->setObjectName(QString::fromUtf8("openLineEdit"));
+
+        horizontalLayout_3->addWidget(openLineEdit);
+
+        openButton = new QPushButton(centralWidget);
+        openButton->setObjectName(QString::fromUtf8("openButton"));
+
+        horizontalLayout_3->addWidget(openButton);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_3);
+
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         horizontalLayout = new QHBoxLayout(groupBox);
@@ -160,7 +179,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 511, 21));
+        menuBar->setGeometry(QRect(0, 0, 548, 20));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -177,6 +196,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        openButton->setText(QApplication::translate("MainWindow", "open", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QApplication::translate("MainWindow", "GroupBox", 0, QApplication::UnicodeUTF8));
         spanishRB->setText(QApplication::translate("MainWindow", "spanish", 0, QApplication::UnicodeUTF8));
         slovakRB->setText(QApplication::translate("MainWindow", "slovak", 0, QApplication::UnicodeUTF8));

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>511</width>
-    <height>241</height>
+    <width>548</width>
+    <height>278</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,20 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLineEdit" name="openLineEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="openButton">
+        <property name="text">
+         <string>open</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
@@ -167,8 +181,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>511</width>
-     <height>21</height>
+     <width>548</width>
+     <height>20</height>
     </rect>
    </property>
   </widget>

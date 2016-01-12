@@ -16,7 +16,7 @@ colombiana:Kolumbijèanka
 cómo?:ako?;aký?;aká?;aké?;akí?
 cubano:kubánsky;Kubánec
 de:z;do
-de dónde?:odkiaL
+de dónde?:odkia¾
 el:ten
 empresario:podnikate¾
 en:v;vo
@@ -62,5 +62,5 @@ una:jedna;nejaká
 usted:vy
 viejo:starý
 vino:víno
-vocabulario:slovná zásoba, slovíèka
+vocabulario:slovná zásoba; slovíèka
 y:a
