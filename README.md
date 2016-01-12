@@ -1,0 +1,1 @@
+# SP_SJ_slovnik
