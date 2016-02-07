@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue 12. Jan 20:54:53 2016
+** Created: Sun 7. Feb 22:01:37 2016
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -35,7 +35,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout_3;
     QLineEdit *openLineEdit;
     QPushButton *openButton;
@@ -48,6 +48,8 @@ public:
     QVBoxLayout *verticalLayout;
     QLineEdit *spanish_lineEdit;
     QLabel *spanish_label;
+    QVBoxLayout *verticalLayout_3;
+    QLabel *correctLabel;
     QPushButton *changeButton;
     QVBoxLayout *verticalLayout_2;
     QLineEdit *slovak_lineEdit;
@@ -62,13 +64,13 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(548, 278);
+        MainWindow->resize(613, 278);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        verticalLayout_3 = new QVBoxLayout(centralWidget);
-        verticalLayout_3->setSpacing(6);
-        verticalLayout_3->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_4 = new QVBoxLayout(centralWidget);
+        verticalLayout_4->setSpacing(6);
+        verticalLayout_4->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
@@ -83,7 +85,7 @@ public:
         horizontalLayout_3->addWidget(openButton);
 
 
-        verticalLayout_3->addLayout(horizontalLayout_3);
+        verticalLayout_4->addLayout(horizontalLayout_3);
 
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
@@ -106,7 +108,7 @@ public:
         horizontalLayout->addWidget(slovakRB);
 
 
-        verticalLayout_3->addWidget(groupBox);
+        verticalLayout_4->addWidget(groupBox);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
@@ -116,7 +118,7 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         spanish_lineEdit = new QLineEdit(centralWidget);
         spanish_lineEdit->setObjectName(QString::fromUtf8("spanish_lineEdit"));
-        spanish_lineEdit->setMinimumSize(QSize(200, 50));
+        spanish_lineEdit->setMinimumSize(QSize(250, 50));
         QFont font;
         font.setPointSize(12);
         spanish_lineEdit->setFont(font);
@@ -138,17 +140,34 @@ public:
 
         horizontalLayout_2->addLayout(verticalLayout);
 
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        correctLabel = new QLabel(centralWidget);
+        correctLabel->setObjectName(QString::fromUtf8("correctLabel"));
+        QFont font2;
+        font2.setPointSize(16);
+        font2.setBold(true);
+        font2.setWeight(75);
+        correctLabel->setFont(font2);
+        correctLabel->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(correctLabel);
+
         changeButton = new QPushButton(centralWidget);
         changeButton->setObjectName(QString::fromUtf8("changeButton"));
 
-        horizontalLayout_2->addWidget(changeButton);
+        verticalLayout_3->addWidget(changeButton);
+
+
+        horizontalLayout_2->addLayout(verticalLayout_3);
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         slovak_lineEdit = new QLineEdit(centralWidget);
         slovak_lineEdit->setObjectName(QString::fromUtf8("slovak_lineEdit"));
-        slovak_lineEdit->setMinimumSize(QSize(200, 50));
+        slovak_lineEdit->setMinimumSize(QSize(250, 50));
         slovak_lineEdit->setFont(font);
         slovak_lineEdit->setAlignment(Qt::AlignCenter);
 
@@ -165,21 +184,21 @@ public:
         horizontalLayout_2->addLayout(verticalLayout_2);
 
 
-        verticalLayout_3->addLayout(horizontalLayout_2);
+        verticalLayout_4->addLayout(horizontalLayout_2);
 
-        verticalSpacer = new QSpacerItem(20, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer = new QSpacerItem(20, 3, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_3->addItem(verticalSpacer);
+        verticalLayout_4->addItem(verticalSpacer);
 
         refreshButton = new QPushButton(centralWidget);
         refreshButton->setObjectName(QString::fromUtf8("refreshButton"));
 
-        verticalLayout_3->addWidget(refreshButton);
+        verticalLayout_4->addWidget(refreshButton);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 548, 20));
+        menuBar->setGeometry(QRect(0, 0, 613, 20));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -201,6 +220,7 @@ public:
         spanishRB->setText(QApplication::translate("MainWindow", "spanish", 0, QApplication::UnicodeUTF8));
         slovakRB->setText(QApplication::translate("MainWindow", "slovak", 0, QApplication::UnicodeUTF8));
         spanish_label->setText(QString());
+        correctLabel->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
         changeButton->setText(QApplication::translate("MainWindow", "CHANGE", 0, QApplication::UnicodeUTF8));
         slovak_label->setText(QString());
         refreshButton->setText(QApplication::translate("MainWindow", "REFRESH", 0, QApplication::UnicodeUTF8));

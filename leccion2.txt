@@ -1,0 +1,80 @@
+ahora:teraz
+algo:nieèo
+allí:tam
+amor:láska;miláèik
+aquí:tu;sem
+ayuda:pomoc
+barato:lacnı
+bien:dobre
+bonito:peknı
+buscar:h¾ada
+calle:ulica
+ciudad;capital:hlavné mesto
+camarero:èašník
+camarera:èašníèka
+caro:drahı
+casa:dom
+en casa:doma
+cerca:blízko
+estar cerca de:by blízko (koho/èo)
+chico:chlapec
+chica:dievèa
+ciudad:mesto
+comida:jedlo
+con:s;so
+contento:spokojnı
+contestar:odpoveda
+contrario:opaènı
+al contrario:naopak
+cosa:vec
+cuenta:úèet
+delante de:pred (miestne)
+derecha;a la derecha:vpravo
+dónde:kde
+edifico:budova
+enseòar:uèi;vyuèova;ukáza;ukazova
+esperar:èaka
+estar:by
+estudiar:študova
+explicar:vysvetli;vysvetlova
+extranjero:zahraniènı;cudzí
+fondo;al fondo:vzadu
+hablar:hovori;rozpráva
+hotel:hotel
+instituto:gymnázium
+jefe:šéf
+lengua:jazyk
+libro:kniha
+llamar:vola
+lleno:plnı
+lugar:miesto
+móvil:mobil
+museo:múzeum
+necesitar:potrebova
+nervioso:nervózny
+oficina:kancelária
+pagar:plati;zaplati
+para:pre
+pequeòo:malı;malá
+plano:plán;mapa
+por favor:prosím
+por qué?:preèo?
+porque:pretoe
+preguntar:pıta sa
+primero:prvı
+que:ktorı;e
+regalo:darèek
+restaurante:reštaurácia
+servicios:toalety;záchody
+sobre:nad;na;o
+taxi:taxík;taxi
+taxista:taxikár
+terminar:skonèi
+terminar la comida:dojes
+todavía:ešte zatia¾
+tomar:vzia (si);zobra (si)
+trabajador:pracovitı
+trabajar:pracova
+trabajo:práca
+vario:rôzny
+vida:ivot

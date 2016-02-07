@@ -5,7 +5,7 @@ alemán:nemeckı;Nemec;nemèina
 alemana:Nemka
 amigo:kamarát;priate¾
 amiga:kamarátka;priate¾ka
-atractivo:prítalivı
+atractivo:príalivı;atraktívny
 boli:pero
 bolígrafo:pero
 bueno:dobrı
@@ -54,7 +54,7 @@ qué?:èo?;èím?
 quién?:kto?
 quiénes?:kto?
 rápido:rıchly
-senor:pán
+seòor:pán
 simpatico:milı;sympatickı
 tú:ty
 un:jeden:nejakı

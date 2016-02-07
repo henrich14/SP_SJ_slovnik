@@ -16,10 +16,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->openLineEdit->setText(dir.path() + "/vocabulario.txt");
 
     ui->spanishRB->setChecked(true);
-    //vocabLen = spanish.size();
-    //checked = true;
-
-    //randNum = random(0, vocabLen);
+    ui->correctLabel->setText("0");
+    ui->correctLabel->setStyleSheet("QLabel {color : red; }");
 
     connect(ui->refreshButton, SIGNAL(clicked()), this, SLOT(refresh_clicked()));
     connect(ui->changeButton, SIGNAL(clicked()), this, SLOT(change_clicked()));
@@ -87,10 +85,16 @@ void MainWindow::refresh_clicked()
             if(equal)
             {
                 ui->slovak_label->setStyleSheet("QLabel {color : green; }");
+
+                int correct = ui->correctLabel->text().toInt();
+                ui->correctLabel->setText(QString::number(correct + 1));
+                ui->correctLabel->setStyleSheet("QLabel {color : green; }");
             }
             else
             {
                 ui->slovak_label->setStyleSheet("QLabel {color : red; }");
+                ui->correctLabel->setText("0");
+                ui->correctLabel->setStyleSheet("QLabel {color : red; }");
             }
         }
         else if(ui->slovakRB->isChecked())
@@ -120,10 +124,15 @@ void MainWindow::refresh_clicked()
             if(equal)
             {
                 ui->spanish_label->setStyleSheet("QLabel {color : green; }");
+                int correct = ui->correctLabel->text().toInt();
+                ui->correctLabel->setText(QString::number(correct + 1));
+                ui->correctLabel->setStyleSheet("QLabel {color : green; }");
             }
             else
             {
                 ui->spanish_label->setStyleSheet("QLabel {color : red; }");
+                ui->correctLabel->setText("0");
+                ui->correctLabel->setStyleSheet("QLabel {color : red; }");
             }
         }
 
